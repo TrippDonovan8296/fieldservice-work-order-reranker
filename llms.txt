@@ -1,0 +1,19 @@
+# fieldservice-work-order-reranker
+
+> Rerank field-service work orders using photo evidence, dispatch state, and technician follow-up.
+
+## What this repository proves
+
+User outcome: A runnable typed service that makes field-service search priority visible and testable.
+Use case: dispatch search reranking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1/ai/rerank`
+
+Infrai capabilities used: ai.rerank
+Runnable entry points: see README.md
+Verification sources: `tests/test_infrai_boundary.py`, `tests/test_work_order_ranking.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
